@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <RootNamespace>Chroma</RootNamespace>
+
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="Chroma" Version="0.17.1" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <Title>Chroma Shine</Title>
+        <Description>Various utilities that make life easier but don't quite fit into the core of Chroma Framework.</Description>
+        <PackageId>Chroma.Shine</PackageId>
+        <Version>0.1.0</Version>
+        <Author>Ciastex</Author>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/Ciastex/Chroma.Shine</RepositoryUrl>
+        <PackageTags>gamedev;engine;2d;chroma;framework;sdl;opengl;game;xna;netcore</PackageTags>
+    </PropertyGroup>
+</Project>
