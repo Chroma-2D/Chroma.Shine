@@ -46,8 +46,11 @@ namespace Chroma.ShineExample
             _e2.Update(delta);
             _e3.Update(delta);
             _e4.Update(delta);
-            
-            CollisionManager.Update(delta);
+        }
+
+        protected override void FixedUpdate(float fixedDelta)
+        {
+            CollisionManager.Update(fixedDelta);
         }
 
         protected override void Draw(RenderContext context)

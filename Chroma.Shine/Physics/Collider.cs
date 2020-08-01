@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Numerics;
 
 namespace Chroma.Physics
@@ -25,7 +26,16 @@ namespace Chroma.Physics
         }
 
         public void Destroy()
-            => CollisionManager.UnregisterCollider(this);
+        {
+            for (var i = 0; i < CollidingWith.Count; i++)
+            {
+                CollidingWith[i].CollidingWith.Remove(this);
+                CollidingWith[i].Entity.OnCollisionExit(Entity);
+            }
+            
+            CollidingWith.Clear();
+            CollisionManager.UnregisterCollider(this);
+        }
 
         public List<Collider> GetCurrentCollisions()
             => new List<Collider>(CollidingWith);
