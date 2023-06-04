@@ -1,7 +1,7 @@
 using System.Numerics;
 using Chroma.Diagnostics.Logging;
 using Chroma.Graphics;
-using Chroma.Input.EventArgs;
+using Chroma.Input;
 using Chroma.Physics;
 
 namespace Chroma.ShineExample
@@ -16,7 +16,7 @@ namespace Chroma.ShineExample
         private Entity _e4;
 
         internal GameCore()
-            : base(false)
+            : base(new(false, false))
         {
             _e1 = new Entity {Position = new Vector2(120, 120)};
             _e1.AttachCollider(new RectangleCollider(_e1, 32, 32) {Tag = "_e1"});

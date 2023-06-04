@@ -36,8 +36,8 @@ namespace Chroma.Graphics
         {
             if (Shearing != Vector2.Zero)
             {
-                context.Transform.Push();
-                context.Transform.Shear(Shearing);
+                RenderTransform.Push();
+                RenderTransform.Shear(Shearing);
             }
 
             context.DrawTexture(
@@ -50,7 +50,7 @@ namespace Chroma.Graphics
 
             if (Shearing != Vector2.Zero)
             {
-                context.Transform.Pop();
+                RenderTransform.Shear(Shearing);
             }
         }
 
