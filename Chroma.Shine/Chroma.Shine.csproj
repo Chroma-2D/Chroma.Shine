@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
         <RootNamespace>Chroma</RootNamespace>
 
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <LangVersion>11</LangVersion>
+        <LangVersion>10</LangVersion>
     </PropertyGroup>
     
     <ItemGroup>
