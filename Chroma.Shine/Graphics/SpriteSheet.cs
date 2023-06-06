@@ -48,15 +48,15 @@ namespace Chroma.Graphics
         {
             if (Shearing != Vector2.Zero)
             {
-                context.Transform.Push();
-                context.Transform.Shear(Shearing);
+                RenderTransform.Push();
+                RenderTransform.Shear(Shearing);
             }
 
             context.DrawTexture(Texture, Position, Scale, Origin, Rotation, _sourceRectangles[CurrentFrame]);
 
             if (Shearing != Vector2.Zero)
             {
-                context.Transform.Pop();
+                RenderTransform.Pop();
             }
         }
 
