@@ -10,14 +10,16 @@
     
     <ItemGroup>
       <PackageReference Include="Chroma" Version="0.58.0" />
+        <None Include="NuGet.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
 
     <PropertyGroup>
         <Title>Chroma Shine</Title>
         <Description>Various utilities that make life easier but don't quite fit into the core of Chroma Framework.</Description>
+        <PackageReadmeFile>NuGet.md</PackageReadmeFile>
         <PackageId>Chroma.Shine</PackageId>
-        <Version>0.1.0</Version>
-        <Author>Ciastex</Author>
+        <Version>0.2.0</Version>
+        <Author>vddCore, nolemretaW</Author>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/Chroma-2D/Chroma.Shine</RepositoryUrl>
         <PackageTags>gamedev;engine;2d;chroma;framework;sdl;opengl;game;xna;netcore</PackageTags>
