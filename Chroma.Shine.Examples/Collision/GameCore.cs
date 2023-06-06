@@ -1,10 +1,11 @@
 using System.Numerics;
+using Chroma;
 using Chroma.Diagnostics.Logging;
 using Chroma.Graphics;
 using Chroma.Input;
 using Chroma.Physics;
 
-namespace Chroma.ShineExample
+namespace Collision
 {
     internal class GameCore : Game
     {

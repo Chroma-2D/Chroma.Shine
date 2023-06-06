@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <LangVersion>10</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Chroma.Shine\Chroma.Shine.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Chroma" Version="0.58.0" />
+    </ItemGroup>
+</Project>
