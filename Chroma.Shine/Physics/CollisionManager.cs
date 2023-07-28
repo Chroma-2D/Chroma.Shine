@@ -6,7 +6,7 @@ namespace Chroma.Physics
 {
     public class CollisionManager
     {
-        private static HashSet<Collider> _colliders;
+        internal static HashSet<Collider> _colliders;
 
         static CollisionManager()
         {
@@ -32,16 +32,13 @@ namespace Chroma.Physics
             if (_colliders.Count <= 1)
                 return;
 
-            for (var i = 0; i < _colliders.Count; i++)
+            foreach(Collider first in _colliders)
             {
-                for (var j = 0; j < _colliders.Count; j++)
+                foreach (Collider second in _colliders)
                 {
-                    if (i == j)
+                    if (first == second)
                         continue;
-
-                    var first = _colliders.ElementAt(i);
-                    var second = _colliders.ElementAt(j);
-
+                    
                     if (!first.Enabled || !second.Enabled)
                         continue;
 

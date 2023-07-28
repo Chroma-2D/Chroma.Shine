@@ -5,14 +5,15 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <RootNamespace>Raycast</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\Chroma.Shine\Chroma.Shine.csproj" />
+      <PackageReference Include="Chroma" Version="0.59.0" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Chroma" Version="0.59.0" />
+      <ProjectReference Include="..\..\Chroma.Shine\Chroma.Shine.csproj" />
     </ItemGroup>
 
 </Project>
