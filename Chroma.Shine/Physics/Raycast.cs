@@ -1,18 +1,22 @@
 ﻿using System;
+using System.Linq;
 using System.Numerics;
 
 namespace Chroma.Physics
 {
     public static class Raycast
     {
-        public static bool Cast(Vector2 origin, Vector2 direction, out RaycastHit raycastHit, float maxDistance = 500f)
+        public static bool Cast(Vector2 origin, Vector2 direction, out RaycastHit raycastHit, float maxDistance = 500f, string[] skipTags = null)
         {
+            if (skipTags == null)
+                skipTags = new String[] { };
             Vector2 currentpos = origin;
             for (int i = 0; i < maxDistance; i++)
             {
                 currentpos += direction;
                 foreach (Collider collider in CollisionManager._colliders)
                 {
+                    if (skipTags.Contains(collider.Tag)) continue;
                     if (collider is RectangleCollider rc)
                     {
                         if (currentpos.X >= rc.Position.X &&
