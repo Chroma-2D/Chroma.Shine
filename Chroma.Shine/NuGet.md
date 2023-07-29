@@ -11,6 +11,7 @@ Check out main framework [here](https://github.com/Chroma-2D/Chroma).
 ## Examples
 * [Spritesheet animation](https://github.com/Chroma-2D/Chroma.Shine/tree/master/Chroma.Shine.Examples/Animation)
 * [Collision detection](https://github.com/Chroma-2D/Chroma.Shine/tree/master/Chroma.Shine.Examples/Collision)
+* [Raycasting](https://github.com/Chroma-2D/Chroma.Shine/tree/master/Chroma.Shine.Examples/Raycasting)
 
 ## Requirements
 * .NET 6.0 or later

@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿using System;
+using System.Numerics;
 
 namespace Chroma.Physics
 {
@@ -6,9 +7,10 @@ namespace Chroma.Physics
     {
         public static bool Cast(Vector2 origin, Vector2 direction, out RaycastHit raycastHit, float maxDistance = 500f)
         {
+            Vector2 currentpos = origin;
             for (int i = 0; i < maxDistance; i++)
             {
-                Vector2 currentpos = origin + (direction * (i + 1));
+                currentpos += direction;
                 foreach (Collider collider in CollisionManager._colliders)
                 {
                     if (collider is RectangleCollider rc)
@@ -24,7 +26,34 @@ namespace Chroma.Physics
                     }
                     else if (collider is CircleCollider cc)
                     {
-                        
+                        //internal static bool OverlapsWithRectangle(Vector2 cp, float cr, Vector2 rp, Size rs)
+                        //return new CollisionResult(OverlapsWithRectangle(Position, Radius, rc.Position, rc.Size)
+                        var circleDistanceX = MathF.Abs(
+                            cc.Position.X - currentpos.X - 0.5f
+                        );
+            
+                        var circleDistanceY = MathF.Abs(
+                            cc.Position.Y - currentpos.Y - 0.5f
+                        );
+
+                        if (circleDistanceX > (0.5f + cc.Radius) ||
+                            circleDistanceY > (0.5f + cc.Radius))
+                        {
+                            continue;
+                        }
+                        else if (circleDistanceX <= 0.5f ||
+                                 circleDistanceY <= 0.5f)
+                        {
+                            raycastHit = new RaycastHit { Posiition = currentpos, Collider = cc};
+                            return true;
+                        }
+
+                        if ((MathF.Pow(circleDistanceX - 0.5f, 2) +
+                             MathF.Pow(circleDistanceY - 0.5f, 2)) <= MathF.Pow(cc.Radius, 2))
+                        {
+                            raycastHit = new RaycastHit { Posiition = currentpos, Collider = cc };
+                            return true;
+                        }
                     }
                 }
             }
