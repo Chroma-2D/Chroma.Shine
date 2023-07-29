@@ -6,13 +6,13 @@ Check out main framework [here](https://github.com/Chroma-2D/Chroma).
 * Spritesheet (together with animated spritesheets) support
 * Collision detection
 * Linear interpolation
+* Raycasting
 
 ## Examples
 * [Spritesheet animation](https://github.com/Chroma-2D/Chroma.Shine/tree/master/Chroma.Shine.Examples/Animation)
 * [Collision detection](https://github.com/Chroma-2D/Chroma.Shine/tree/master/Chroma.Shine.Examples/Collision)
+* [Raycasting](https://github.com/Chroma-2D/Chroma.Shine/tree/master/Chroma.Shine.Examples/Raycasting)
 
 ## Requirements
 * .NET 6.0 or later
-* Chroma 0.58.0 - Currently you need to compile it yourself
-
-You can download Chroma.Shine either from this repository, or from [NuGet](https://www.nuget.org/packages/Chroma.Shine)
+* Chroma 0.59.0 - Currently you need to compile it yourself
