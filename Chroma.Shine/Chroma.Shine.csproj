@@ -6,7 +6,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <LangVersion>10</LangVersion>
-        <PackageReleaseNotes>Added a skipTags parameter to Raycast.Cast to specify tags to skip</PackageReleaseNotes>
+        <PackageReleaseNotes>Fixed typo and updated Chroma to 0.62.2</PackageReleaseNotes>
     </PropertyGroup>
     
     <ItemGroup>
@@ -19,7 +19,7 @@
         <Description>Various utilities that make life easier but don't quite fit into the core of Chroma Framework.</Description>
         <PackageReadmeFile>NuGet.md</PackageReadmeFile>
         <PackageId>Chroma.Shine</PackageId>
-        <Version>0.3.1</Version>
+        <Version>0.3.2</Version>
         <Author>vddCore, nolemretaW</Author>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/Chroma-2D/Chroma.Shine</RepositoryUrl>
