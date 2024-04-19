@@ -10,7 +10,7 @@
     </PropertyGroup>
     
     <ItemGroup>
-      <PackageReference Include="Chroma" Version="0.59.0" />
+      <PackageReference Include="Chroma" Version="0.62.2" />
         <None Include="NuGet.md" Pack="true" PackagePath="\" />
     </ItemGroup>
 

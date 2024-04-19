@@ -46,7 +46,7 @@ namespace Raycasting
             RaycastHit hit;
             if (Raycast.Cast(new Vector2(300, 350), Vector2.Normalize(_mousePos - new Vector2(300, 350)), out hit, Vector2.Distance(_mousePos, new Vector2(300, 350)), new []{"_e4"}))
             {
-                Log.Info($"Hit {hit.Collider.Tag} at {hit.Posiition.X}, {hit.Posiition.Y}");
+                Log.Info($"Hit {hit.Collider.Tag} at {hit.Position.X}, {hit.Position.Y}");
                 _rayOriginColor = Color.Green;
             }
             else

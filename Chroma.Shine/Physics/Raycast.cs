@@ -8,8 +8,7 @@ namespace Chroma.Physics
     {
         public static bool Cast(Vector2 origin, Vector2 direction, out RaycastHit raycastHit, float maxDistance = 500f, string[] skipTags = null)
         {
-            if (skipTags == null)
-                skipTags = new String[] { };
+            skipTags ??= new String[] { };
             Vector2 currentpos = origin;
             for (int i = 0; i < maxDistance; i++)
             {
@@ -24,7 +23,7 @@ namespace Chroma.Physics
                             currentpos.Y >= rc.Position.Y &&
                             currentpos.Y <= rc.Position.Y + rc.Size.Height)
                         {
-                            raycastHit = new RaycastHit {Posiition = currentpos, Collider = rc};
+                            raycastHit = new RaycastHit {Position = currentpos, Collider = rc};
                             return true;
                         }
                     }
@@ -48,21 +47,21 @@ namespace Chroma.Physics
                         else if (circleDistanceX <= 0.5f ||
                                  circleDistanceY <= 0.5f)
                         {
-                            raycastHit = new RaycastHit { Posiition = currentpos, Collider = cc};
+                            raycastHit = new RaycastHit { Position = currentpos, Collider = cc};
                             return true;
                         }
 
                         if ((MathF.Pow(circleDistanceX - 0.5f, 2) +
                              MathF.Pow(circleDistanceY - 0.5f, 2)) <= MathF.Pow(cc.Radius, 2))
                         {
-                            raycastHit = new RaycastHit { Posiition = currentpos, Collider = cc };
+                            raycastHit = new RaycastHit { Position = currentpos, Collider = cc };
                             return true;
                         }
                     }
                 }
             }
 
-            raycastHit = new RaycastHit { Posiition = Vector2.Zero};
+            raycastHit = new RaycastHit { Position = Vector2.Zero};
             return false;
         }
     }
