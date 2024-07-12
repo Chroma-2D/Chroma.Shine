@@ -34,11 +34,6 @@ namespace Collision
                 Position = new Vector2(256),
                 Tag = "_e4"
             });
-
-            CollisionManager.CollisionDetected += (sender, e) =>
-            {
-                Log.Info($"Collision: {e.First.Tag} <-> {e.Second.Tag}");
-            };
         }
 
         protected override void Update(float delta)
@@ -51,7 +46,7 @@ namespace Collision
 
         protected override void FixedUpdate(float fixedDelta)
         {
-            CollisionManager.Update(fixedDelta);
+            _e3.Collider.UpdateCollisions((e) => {Log.Info($"Collision: {e.First.Tag} <-> {e.Second.Tag}");});
         }
 
         protected override void Draw(RenderContext context)

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Numerics;
 using Chroma.MemoryManagement;
@@ -13,6 +14,7 @@ namespace Chroma.Graphics
         public Vector2 Scale = Vector2.One;
         public Vector2 Origin;
         public Vector2 Shearing;
+        public Size Size { get; }
 
         public float Rotation;
 
@@ -22,6 +24,7 @@ namespace Chroma.Graphics
                 throw new FileNotFoundException("The file path provided does not exist.");
 
             Texture = new Texture(filePath);
+            Size = new Size(Texture.Width, Texture.Height);
         }
 
         public Sprite(Texture texture)
@@ -30,6 +33,7 @@ namespace Chroma.Graphics
                 throw new ArgumentException("Texture you're trying to use was already disposed.", nameof(texture));
 
             Texture = texture;
+            Size = new Size(texture.Width, texture.Height);
         }
 
         public virtual void Draw(RenderContext context)

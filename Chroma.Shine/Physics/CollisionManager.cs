@@ -34,47 +34,7 @@ namespace Chroma.Physics
 
             foreach(Collider first in _colliders)
             {
-                foreach (Collider second in _colliders)
-                {
-                    if (first == second)
-                        continue;
-                    
-                    if (!first.Enabled || !second.Enabled)
-                        continue;
-
-                    var result = first.Collide(second);
-
-                    if (result.Occured)
-                    {
-                        if (!first.CollidingWith.Contains(second))
-                        {
-                            first.CollidingWith.Add(second);
-                            first.Entity.OnCollisionEnter(second.Entity);
-                        }
-
-                        if (!second.CollidingWith.Contains(first))
-                        {
-                            second.CollidingWith.Add(first);
-                            second.Entity.OnCollisionEnter(first.Entity);
-                        }
-
-                        CollisionDetected?.Invoke(null, new CollisionEventArgs(first, second));
-                    }
-                    else
-                    {
-                        if (first.CollidingWith.Contains(second))
-                        {
-                            first.CollidingWith.Remove(second);
-                            first.Entity.OnCollisionExit(second.Entity);
-                        }
-
-                        if (second.CollidingWith.Contains(first))
-                        {
-                            second.CollidingWith.Remove(first);
-                            second.Entity.OnCollisionExit(first.Entity);
-                        }
-                    }
-                }
+                first.UpdateCollisions((args) => { CollisionDetected?.Invoke(null, args);});
             }
         }
     }

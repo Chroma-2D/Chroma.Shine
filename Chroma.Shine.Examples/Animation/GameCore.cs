@@ -23,9 +23,9 @@ namespace Animation
             );
         }
 
-        protected override void LoadContent()
+        protected override void Initialize(IContentProvider content)
         {
-            _spriteSheet = new SpriteSheet(Content.Load<Texture>("Textures/Spritesheet.png"), 128, 128);
+            _spriteSheet = new SpriteSheet(content.Load<Texture>("Textures/Spritesheet.png"), 128, 128);
             _spriteSheet.Position = new Vector2(30, 40);
             _spriteSheetAnimation = new SpriteSheetAnimation(_spriteSheet, 1, 24, 0.5f);
             _spriteSheetAnimation.Repeat = true;

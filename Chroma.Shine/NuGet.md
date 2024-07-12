@@ -15,4 +15,4 @@ Check out main framework [here](https://github.com/Chroma-2D/Chroma).
 
 ## Requirements
 * .NET 6.0 or later
-* Chroma 0.62.2
+* Chroma 0.64.0

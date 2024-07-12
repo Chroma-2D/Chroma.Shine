@@ -6,11 +6,11 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <LangVersion>10</LangVersion>
-        <PackageReleaseNotes>Fixed typo and updated Chroma to 0.62.2</PackageReleaseNotes>
+        <PackageReleaseNotes>Updated Chroma dependency to 0.64.0, Sprite.Size property and colliders can update collisions with other objects manually with Collider.UpdateCollisions() to improve performance.</PackageReleaseNotes>
     </PropertyGroup>
     
     <ItemGroup>
-      <PackageReference Include="Chroma" Version="0.62.2" />
+      <PackageReference Include="Chroma" Version="0.64.0" />
         <None Include="NuGet.md" Pack="true" PackagePath="\" />
     </ItemGroup>
 
@@ -19,7 +19,7 @@
         <Description>Various utilities that make life easier but don't quite fit into the core of Chroma Framework.</Description>
         <PackageReadmeFile>NuGet.md</PackageReadmeFile>
         <PackageId>Chroma.Shine</PackageId>
-        <Version>0.3.2</Version>
+        <Version>0.5.0</Version>
         <Author>vddCore, nolemretaW</Author>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/Chroma-2D/Chroma.Shine</RepositoryUrl>
