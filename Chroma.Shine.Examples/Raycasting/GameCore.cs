@@ -14,6 +14,8 @@ namespace Raycasting
         private Entity _e1, _e2, _e3, _e4;
         private Vector2 _mousePos = Vector2.One;
         private Color _rayOriginColor = Color.Red;
+        private bool _raycastHit;
+        private RaycastHit hit;
 
         internal GameCore()
             : base(new(false, false))
@@ -43,15 +45,16 @@ namespace Raycasting
         protected override void FixedUpdate(float fixedDelta)
         {
             CollisionManager.Update(fixedDelta);
-            RaycastHit hit;
             if (Raycast.Cast(new Vector2(300, 350), Vector2.Normalize(_mousePos - new Vector2(300, 350)), out hit, Vector2.Distance(_mousePos, new Vector2(300, 350)), new []{"_e4"}))
             {
                 Log.Info($"Hit {hit.Collider.Tag} at {hit.Position.X}, {hit.Position.Y}");
                 _rayOriginColor = Color.Green;
+                _raycastHit = true;
             }
             else
             {
                 _rayOriginColor = Color.Red;
+                _raycastHit = false;
             }
         }
 
@@ -62,7 +65,7 @@ namespace Raycasting
             _e3.Draw(context);
             _e4.Draw(context);
             context.Rectangle(ShapeMode.Fill, 300, 350, 5, 5, _rayOriginColor);
-            context.Line(new Vector2(300, 350), _mousePos, Color.Red);
+            context.Line(new Vector2(300, 350), _raycastHit ? hit.Position : _mousePos, Color.Red);
         }
         
         protected override void MouseMoved(MouseMoveEventArgs e)

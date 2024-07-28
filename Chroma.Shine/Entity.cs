@@ -64,9 +64,6 @@ namespace Chroma
 
         public virtual void OnCollisionEnter(Entity e)
         {
-            if (e.Collider.Tag == "_e1")
-                e.Collider.Destroy();
-            
             _colliderDebugColor = Color.Red;
         }
 

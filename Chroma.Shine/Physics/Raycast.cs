@@ -29,8 +29,6 @@ namespace Chroma.Physics
                     }
                     else if (collider is CircleCollider cc)
                     {
-                        //internal static bool OverlapsWithRectangle(Vector2 cp, float cr, Vector2 rp, Size rs)
-                        //return new CollisionResult(OverlapsWithRectangle(Position, Radius, rc.Position, rc.Size)
                         var circleDistanceX = MathF.Abs(
                             cc.Position.X - currentpos.X - 0.5f
                         );
