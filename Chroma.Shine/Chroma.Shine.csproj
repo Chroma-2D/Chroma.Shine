@@ -1,12 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net7.0</TargetFramework>
         <RootNamespace>Chroma</RootNamespace>
 
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <LangVersion>10</LangVersion>
-        <PackageReleaseNotes>Updated Chroma dependency to 0.64.0, Sprite.Size property and colliders can update collisions with other objects manually with Collider.UpdateCollisions() to improve performance.</PackageReleaseNotes>
     </PropertyGroup>
     
     <ItemGroup>
@@ -15,14 +14,16 @@
     </ItemGroup>
 
     <PropertyGroup>
-        <Title>Chroma Shine</Title>
+        <Title>Chroma.Shine</Title>
         <Description>Various utilities that make life easier but don't quite fit into the core of Chroma Framework.</Description>
         <PackageReadmeFile>NuGet.md</PackageReadmeFile>
         <PackageId>Chroma.Shine</PackageId>
-        <Version>0.4.0</Version>
-        <Author>vddCore, nolemretaW</Author>
+        <Version>0.4.1</Version>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/Chroma-2D/Chroma.Shine</RepositoryUrl>
         <PackageTags>gamedev;engine;2d;chroma;framework;sdl;opengl;game;xna;netcore</PackageTags>
+        <PackageReleaseNotes>July 2024 maintenance update</PackageReleaseNotes>
+        <Company>Chroma Framework Development Team</Company>
+        <Authors>vddCore, nolemretaW</Authors>
     </PropertyGroup>
 </Project>
