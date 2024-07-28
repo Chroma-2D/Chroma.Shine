@@ -14,5 +14,5 @@ Check out main framework [here](https://github.com/Chroma-2D/Chroma).
 * [Raycasting](https://github.com/Chroma-2D/Chroma.Shine/tree/master/Chroma.Shine.Examples/Raycasting)
 
 ## Requirements
-* .NET 6.0 or later
+* .NET 7.0 or later
 * Chroma 0.64.0
