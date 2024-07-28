@@ -12,8 +12,8 @@ namespace Chroma.Graphics
 
         public Vector2 Position;
         public Vector2 Scale = Vector2.One;
-        public Vector2 Origin;
-        public Vector2 Shearing;
+        public Vector2 Origin { get; set; }
+        public Vector2 Shearing { get; set; }
         public Size Size { get; }
 
         public float Rotation;

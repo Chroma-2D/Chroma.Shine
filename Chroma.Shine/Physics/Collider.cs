@@ -13,7 +13,7 @@ namespace Chroma.Physics
         public string Tag { get; set; }
 
         public Vector2 Position { get; set; }
-        public Entity Entity { get; set; }
+        public Entity Entity { get; }
 
         public Collider(Entity entity, bool startEnabled = true, bool autoRegister = true)
         {

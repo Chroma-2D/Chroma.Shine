@@ -6,7 +6,7 @@ namespace Chroma.Physics
 {
     public class RectangleCollider : Collider
     {
-        public Size Size;
+        public Size Size { get; }
 
         public RectangleCollider(Entity entity, int width, int height) : base(entity)
         {

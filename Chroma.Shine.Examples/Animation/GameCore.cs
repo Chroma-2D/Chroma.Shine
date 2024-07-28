@@ -3,6 +3,7 @@ using Chroma;
 using Chroma.ContentManagement;
 using Chroma.ContentManagement.FileSystem;
 using Chroma.Graphics;
+using Chroma.Graphics.TextRendering.TrueType;
 
 namespace Animation
 {
@@ -40,6 +41,7 @@ namespace Animation
         protected override void Draw(RenderContext context)
         {
             _spriteSheetAnimation.Draw(context);
+            context.DrawString(TrueTypeFont.Default, $"FPS: {Chroma.Diagnostics.PerformanceCounter.FPS}\nDelta: {Chroma.Diagnostics.PerformanceCounter.Delta}", 0, 0, Color.White);
         }
     }
 }
